@@ -81,7 +81,7 @@ module.exports.generateImage = async () => {
     ctx.fillStyle = "black";
     ctx.font = '80px "Cardo"';
     ctx.textAlign = "center";
-    wrapText(ctx, `“${quote.q}”`, 90, quote.a);
+    wrapText(ctx, `“Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.”`, 90, quote.a);
 
     // Logo
     ctx.font = '54px "DancingScript"';
