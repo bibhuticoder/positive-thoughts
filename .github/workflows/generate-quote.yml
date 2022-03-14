@@ -6,7 +6,7 @@ on:
     - cron: "*/2 * * * *" # every two minutes
 
 jobs:
-  Quote generation:
+  quote_generation:
     runs-on: ubuntu-latest
 
     steps:
