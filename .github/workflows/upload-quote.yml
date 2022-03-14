@@ -2,7 +2,8 @@ name: Upload quote
 
 on:
   schedule:
-    - cron: "*/7 * * * *" # every three minutes
+    - cron: "*/7 * * * *" # every seven minutes
+  workflow_dispatch:
 
 jobs:
   quote_upload:
