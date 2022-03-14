@@ -2,7 +2,7 @@ name: Generate quote
 
 on:
   schedule:
-    - cron: "*/6 * * * *" # every siz minutes
+    - cron: "0 */2 * * *" # every 2 hours
   workflow_dispatch:
 
 jobs:
