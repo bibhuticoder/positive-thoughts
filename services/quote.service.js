@@ -81,11 +81,11 @@ module.exports.generateImage = async () => {
     ctx.fillStyle = "black";
     ctx.font = '80px "Cardo"';
     ctx.textAlign = "center";
-    wrapText(ctx, `“Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.”`, 90, quote.a);
+    wrapText(ctx, `${quote.q}`, 90, quote.a);
+    fs.writeFileSync("./assets/latest_quote.txt", `${quote.q} ${quote.a ? ('\n - ' + quote.a) : ''}`);
 
     // Logo
     ctx.font = '54px "DancingScript"';
-    let text = "positive thoughts";
     ctx.fillText("positive thoughts", ctx.canvas.width / 2, 250);
 
     // save image

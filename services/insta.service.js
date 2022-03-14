@@ -1,4 +1,5 @@
 const Instagram = require('instagram-web-api')
+const fs = require("fs");
 const { username, password } = { username: 'p.o.s.i.t.i.v.e.thoughts', password: 'vivelatales' }
 const imaps = require("imap-simple");
 const _ = require("lodash");
@@ -6,10 +7,11 @@ const simpleParser = require("mailparser").simpleParser;
 
 module.exports.uploadImage = async () => {
     const client = new Instagram({ username, password });
+    let caption = fs.readFileSync('./assets/latest_quote.txt');
 
     try {
         await client.login();
-        await client.uploadPhoto({ photo: './assets/quote.jpg', caption: 'Positive Thoughts', post: 'feed' });
+        await client.uploadPhoto({ photo: './assets/quote.jpg', caption, post: 'feed' });
         console.log("Uploaded Image");
     } catch (e) {
         console.log("Login failed", e.error);
@@ -88,7 +90,7 @@ module.exports.uploadImage = async () => {
 
                                                     await client.login();
 
-                                                    await client.uploadPhoto({ photo: './assets/quote.jpg', caption: 'Positive Thoughts', post: 'feed' });
+                                                    await client.uploadPhoto({ photo: './assets/quote.jpg', caption, post: 'feed' });
                                                     console.log("Uploaded Image");
                                                 }
                                             }
