@@ -2,7 +2,7 @@ name: Upload quote
 
 on:
   schedule:
-    - cron: "*/3 * * * *" # every three minutes
+    - cron: "*/7 * * * *" # every three minutes
 
 jobs:
   quote_upload:
