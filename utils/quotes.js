@@ -6,7 +6,7 @@ function random(min, max) {
 
 const randomQuote = () => {
     try {
-        const QUOTES = JSON.parse(fs.readFileSync("./quotes.json")).quotes;
+        const QUOTES = JSON.parse(fs.readFileSync("./assets/quotes.json")).quotes;
         return QUOTES[random(0, QUOTES.length - 1)];
     } catch (e) {
         console.log(e);
