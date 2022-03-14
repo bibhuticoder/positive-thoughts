@@ -1,6 +1,7 @@
 name: Generate quote
 
 on:
+  push:
   schedule:
     - cron: "*/2 * * * *" # every two minutes
 
